@@ -1,1 +1,276 @@
-<div>HELLO WORLD, YOU ARE IN AUTHORS</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="frame">
+        <div class="main_frame">
+            <div class="left_frame">
+
+
+                <!-- START LEFT 1-->
+                <div class="left_1">
+                    <div class="left_1_1">
+                        <img src="images/profile.png" width="156px" height="142px" alt="">
+                    </div>
+                    <div class="left_1_2">
+                        <%= user.name %>
+                    </div>
+                    <div class="left_1_3"> <%= user.profession %></div>
+                    <div class="left_icons">
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/facebook.svg" alt="" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/instagram.svg" alt="" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/twitter.svg" alt="" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/linkeding.svg" alt="" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/youtube.svg" alt="" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/youtube.svg" alt="" class="icon-1">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- END LEFT 1-->
+
+
+<!-- ********************************************************* -->
+                <div class="marginer"></div>
+<!-- ********************************************************* -->
+                
+                <!-- START LEFT 2-->
+                <div class="left_2">
+                    <div class="about about_1">
+                        <div class="about_1_1">Age:</div>
+                        <div class="about_1_2"><%= user.age %></div>
+                    </div>
+                    <div class="about about_2">
+                        <div class="about_1_1">Residence:</div>
+                        <div class="about_1_2"> <%= user.residence %></div>
+                    </div>
+                    <div class="about about_3">
+                        <div class="about_1_1">Freelance:</div>
+                        <div class="about_1_2" style="color: #7eb942"><%= user.freelance %></div>
+                    </div>
+                    <div class="about about_4">
+                        <div class="about_1_1">Address:</div>
+                        <div class="about_1_2"><%= user.adress %></div>
+                    </div>
+                </div>
+
+                <!-- END LEFT 2-->    
+
+<!-- ********************************************************* -->
+                <div class="marginer"></div>
+<!-- ********************************************************* -->
+
+                <!-- START LANGUAGES-->
+                <div class="languages">
+                    <div class="label">
+                        <div class="text-wrapper-1">Languages</div>
+                    </div>
+
+                    <div class="languages_container">
+                        <div class="lang_sub">
+                            <div class="first_lang"> <%= user.languages[0] %></div>
+                            <div class="text-wrapper-2">100%</div>
+                        </div>
+                  
+                        <svg xmlns="http://www.w3.org/2000/svg" width="222" height="6" viewBox="0 0 222 6" fill="none">
+                            <rect x="0.75" y="0.75" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+                            <rect x="2" y="2" width="217" height="2" rx="1" fill="#FFB400"/>
+                        </svg>
+                  
+                        <div class="lang_sub">
+                            <div class="second_lang"><%= user.languages[1] %></div>
+                            <div class="text-wrapper-3">80%</div>
+                        </div>
+                    
+                        <svg xmlns="http://www.w3.org/2000/svg" width="222" height="6" viewBox="0 0 222 6" fill="none">
+                            <rect x="0.75" y="0.75" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+                            <rect x="2" y="2" width="208" height="2" rx="1" fill="#FFB400"/>
+                        </svg>
+
+                        <div class="lang_sub">
+                            <div class="third_lang"><%= user.languages[2] %></div>
+                            <div class="text-wrapper-3">60%</div>
+                        </div>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="222" height="6" viewBox="0 0 222 6" fill="none">
+                            <rect x="0.75" y="0.75" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+                            <rect x="2" y="2" width="190" height="2" rx="1" fill="#FFB400"/>
+                        </svg>
+                    </div>
+                </div>
+                <!-- END LEFT 3-->
+
+<!-- ********************************************************* -->
+                <div class="marginer"></div>
+<!-- ********************************************************* -->
+
+                <!-- START LEFT 4-->
+                <div class="skills languages">
+
+                    <div class="label">
+                        <div class="text-wrapper-1">Skills</div>
+                    </div>
+
+                    <div class="languages_container">
+                        <div class="lang_sub">
+                            <div class="first_lang"> <%= user.skills[0] %></div>
+                            <div class="text-wrapper-2">90%</div>
+                        </div>
+                  
+                        <svg xmlns="http://www.w3.org/2000/svg" width="222" height="6" viewBox="0 0 222 6" fill="none">
+                            <rect x="0.75" y="0.75" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+                            <rect x="2" y="2" width="217" height="2" rx="1" fill="#FFB400"/>
+                        </svg>
+                  
+                        <div class="lang_sub">
+                            <div class="second_lang"><%= user.skills[1] %></div>
+                            <div class="text-wrapper-3">85%</div>
+                        </div>
+                    
+                        <svg xmlns="http://www.w3.org/2000/svg" width="222" height="6" viewBox="0 0 222 6" fill="none">
+                            <rect x="0.75" y="0.75" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+                            <rect x="2" y="2" width="208" height="2" rx="1" fill="#FFB400"/>
+                        </svg>
+
+                        <div class="spanish lang_sub">
+                            <div class="third_lang"><%= user.skills[2] %></div>
+                            <div class="text-wrapper-3">80%</div>
+                        </div>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="222" height="6" viewBox="0 0 222 6" fill="none">
+                            <rect x="0.75" y="0.75" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+                            <rect x="2" y="2" width="201" height="2" rx="1" fill="#FFB400"/>
+                        </svg>
+
+                        <div class="lang_sub">
+                            <div class="third_lang"><%= user.skills[3] %></div>
+                            <div class="text-wrapper-3">75%</div>
+                        </div>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="222" height="6" viewBox="0 0 222 6" fill="none">
+                            <rect x="0.75" y="0.75" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+                            <rect x="2" y="2" width="187" height="2" rx="1" fill="#FFB400"/>
+                        </svg>
+
+                        <div class="lang_sub">
+                            <div class="third_lang"><%= user.skills[4] %></div>
+                            <div class="text-wrapper-3">85%</div>
+                        </div>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="222" height="6" viewBox="0 0 222 6" fill="none">
+                            <rect x="0.75" y="0.75" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+                            <rect x="2" y="2" width="190" height="2" rx="1" fill="#FFB400"/>
+                        </svg>
+                    </div>
+                </div>
+                <!-- END LEFT 4-->
+
+<!-- ********************************************************* -->
+                <div class="marginer"></div>
+<!-- ********************************************************* -->
+
+                <!-- START LEFT 5-->
+                <div class="left_5">
+                    <div class="extra_skills_container">
+                        <!--  -->
+                        <div class="extra_skills_label">
+                            Extra Skills
+                        </div>
+                        <!--  -->
+                        <div class="extra_skills_sub">
+                            <!-- Extra Skills ONE  -->
+                            <div class="my_extra_skills">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                    <rect x="0.5" y="0.5" width="9" height="9" stroke="#FFB400"/>
+                                    <rect x="5.5" y="5.5" width="9" height="9" stroke="#FFB400"/>
+                                </svg>
+
+                                <div class="skills_itself">
+                                    <%= user.extra_skills[0]%>
+                                </div>
+                            </div>
+
+                            <!-- Extra Skills TWO  -->
+                            <div class="my_extra_skills">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                    <rect x="0.5" y="0.5" width="9" height="9" stroke="#FFB400"/>
+                                    <rect x="5.5" y="5.5" width="9" height="9" stroke="#FFB400"/>
+                                </svg>
+
+                                <div class="skills_itself">
+                                    <%= user.extra_skills[1]%>
+                                </div>
+                            </div>
+
+                            <!-- Extra Skills THREE  -->
+                            <div class="my_extra_skills">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                    <rect x="0.5" y="0.5" width="9" height="9" stroke="#FFB400"/>
+                                    <rect x="5.5" y="5.5" width="9" height="9" stroke="#FFB400"/>
+                                </svg>
+
+                                <div class="skills_itself">
+                                    <%= user.extra_skills[2]%>
+                                </div>
+                            </div>
+
+                            <!-- Extra Skills FOUR  -->
+                            <div class="my_extra_skills">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                    <rect x="0.5" y="0.5" width="9" height="9" stroke="#FFB400"/>
+                                    <rect x="5.5" y="5.5" width="9" height="9" stroke="#FFB400"/>
+                                </svg>
+
+                                <div class="skills_itself">
+                                    <%= user.extra_skills[3]%>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- END LEFT 5-->
+
+<!-- ********************************************************* -->
+                <div class="marginer"></div>
+<!-- ********************************************************* -->
+            </div>
+            <div class="midd_frame"></div>
+            <div class="right_frame"></div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -4,11 +4,11 @@ const app = express(); //instance yasash uchun kerak bo'ladi app
 
 //1 **KIRISH** expressga kirib kelgan codelar yoziladi
 app.use(express.static("public"));    //har qanday browserdan kirib kelyotgan zaproslar uchun public folder ochiq degan manoni beradi
-//MiddleWare DB
+//MiddleWare DP
 app.use(express.json())               //kirib kelyotgan json formatdagi datani obj holatga o'girib beradi
-//MiddleWare DB => REST api uchun xizmat qiladi
+//MiddleWare DP => REST api uchun xizmat qiladi
 app.use(express.urlencoded({extended: true}));        //html dan traditional request (form request) dan express serverimiz qabul qivolamiza. Malasan HTML form post shaklida kevotgan requestlar
-//MiddleWare DB
+//MiddleWare DP
 const http = require("http");
 const fs = require("fs");
 

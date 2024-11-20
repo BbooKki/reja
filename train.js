@@ -109,5 +109,5 @@ MASALAN countLetter("e", "engineer") 3ni return qiladi.
 //     return count;
 // }
 
-// const c = findHow("e", "engineer");
+// const c = findLetter("e", "engineer");
 // console.log(c);

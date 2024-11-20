@@ -2,12 +2,20 @@ console.log("Web Serverni boshlash");
 const express = require("express");
 const app = express(); //instance yasash uchun kerak bo'ladi app
 
+//Front
+
+// Design Pattern lar 2 xil bo'ladi Architectual va Design Patternlar
 //1 **KIRISH** expressga kirib kelgan codelar yoziladi
 app.use(express.static("public"));    //har qanday browserdan kirib kelyotgan zaproslar uchun public folder ochiq degan manoni beradi
 //MiddleWare DP
+
 app.use(express.json())               //kirib kelyotgan json formatdagi datani obj holatga o'girib beradi
 //MiddleWare DP => REST api uchun xizmat qiladi
+// REST API
+
 app.use(express.urlencoded({extended: true}));        //html dan traditional request (form request) dan express serverimiz qabul qivolamiza. Malasan HTML form post shaklida kevotgan requestlar
+// TRADITIONAL API
+
 //MiddleWare DP
 const http = require("http");
 const fs = require("fs");
@@ -24,6 +32,7 @@ fs.readFile("database/user.json", "utf-8", (err, data)=>{
 //2 **Session CODE**
 
 //3 **VIEWS CODE** Backenda front end yasaymiz (VIEW yasaymiz)
+//EJS backend'da front end'mizni qurub beryabdi
 app.set("views", "views");
 app.set("view engine", "ejs"); //view engine ejs ligini ko'rsatib beryabmiz
 

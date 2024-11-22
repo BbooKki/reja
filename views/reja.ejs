@@ -20,7 +20,7 @@
                     autofocus
                     autocomplete="off"
                     type="text" 
-                    name="item"  
+                    name="reja"  
                     id="create-field">
                     <button class="btn btn-primary" style="border-radius: 20px;">
                         Yangi Harid Qo'shish
@@ -29,6 +29,25 @@
 
             </form>
         </div>
+
+        
+
+        <ul id="item-list" class="list-group pb-5">
+            <% items.map(function(item){%>
+                <li
+            class="list-group-item list-group-item-info d-flex align-items-center justify-content-between"
+            >
+                <span class="item-text"><%= item.reja %></span>
+                <div>
+                    <button data-id="<%= item._id %>" class="edit-me btn btn-secondary btn-sm mr-1">
+                        Ozgartirish
+                    </button>
+                    <button data-id="<%= item._id %>" class="delete-me btn btn-danger btn-sm">Ochirish</button>
+                </div>
+            </li>
+           <% }) %>
+        </ul>
+
         <button id="clean-all" class="btn btn-danger" style="border-radius: 20px;">
             Hammasini Rejalarni O'chirish
         </button>

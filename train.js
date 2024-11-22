@@ -111,3 +111,27 @@ MASALAN countLetter("e", "engineer") 3ni return qiladi.
 
 // const c = findLetter("e", "engineer");
 // console.log(c);
+
+
+/*
+    B-TASK: 
+
+Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+
+
+function countNum(str){
+    let count = 0;
+    for(let i = 0; i < str.length; i++){
+        if(str[i]>= '0' && str[i]<='9'){
+            count++;
+        }
+    }
+    return count;
+}
+
+const a = countNum("asdf345346543");
+console.log(a);
+
+*/
+

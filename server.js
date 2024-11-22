@@ -51,7 +51,7 @@ app.get('/author', (req, res) => {
 
 
 app.get("/", function(req, res){ //get database'dan ma'lumot o'qiydi
-    res.render("harid"); //ejs dagi harid.ejs fileni render qilyabmiza
+    res.render("reja"); //ejs dagi harid.ejs fileni render qilyabmiza
 });
 
 
@@ -60,7 +60,7 @@ app.get("/", function(req, res){ //get database'dan ma'lumot o'qiydi
 const server = http.createServer(app); //serverga appni yuklayabmiza
 let PORT = 3000;
 server.listen(PORT, function(){
-    console.log(`The server is running successfully on port: ${PORT}`);
+    console.log(`The server is running successfully on port: ${PORT}, http://localhost:${PORT}`);
 });
 
 //express orqali web server qurib oldik.

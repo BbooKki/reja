@@ -135,3 +135,36 @@ console.log(a);
 
 */
 
+/*
+
+//MIT_TACK_C
+class Shop {
+    constructor(non, lagmon, cola){
+      this.non = non;
+      this.lagmon = lagmon;
+      this.cola = cola;
+    }
+    
+    qoldiq(){
+      console.log(`${new Date().toTimeString().slice(0, 5)}da ${this.non}ta Non, ${this.lagmon}ta Lagmon va ${this.cola}ta Cola mavjud`);
+    }
+    
+    sotish(item, quantity){
+      console.log(`${new Date().toTimeString().slice(0, 5)}`);
+      this[item] += quantity;
+    }
+    
+    qabul(item, quantity){
+      console.log(`${new Date().toTimeString().slice(0, 5)}`);
+      this[item] += quantity;
+    }
+  }
+  
+  const shop = new Shop(4, 5, 2);
+  
+  shop.sotish('non', 3);
+  shop.qabul('cola', 4);
+  shop.qoldiq();
+  
+  */
+        

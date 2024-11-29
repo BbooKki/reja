@@ -68,6 +68,6 @@ document.getElementById("clean-all").addEventListener("click", function () {
             document.location.reload();
         })
         .catch((err) => {
-            console.error("Failed to delete all items:", err);
+            console.error("Error:", err);
         });
 });

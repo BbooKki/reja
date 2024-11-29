@@ -1,3 +1,44 @@
+/*
+D-TASK: 
+
+Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+*/
+
+//1. turn string to arrays
+//2. check the each elemen from the first elem if it exists in the second array
+//3. if it exists then delete the item from both arrays
+
+function checkContent(a, b){
+    let arr1 = a.split("");
+    let arr2 = b.split("");
+  
+    console.log(arr1);
+    console.log(arr2);
+    
+   if (arr1.length !== arr2.length) { //length mismatch
+       console.log(false);  
+       return false;  
+    }
+    
+    for(let i = 0; i < arr1.length; i++){
+      if(arr2.includes(arr1[i])){ //match checker
+        let index = arr2.indexOf(arr1[i]);
+        arr2.splice(index, 1);
+        console.log(arr2);
+        
+      } else if (!arr2.includes(arr1[i])){ //mismatch checker
+        console.log(false);
+        return false; 
+      }
+    }
+    
+    console.log(true);
+    return true;
+  }
+  
+  
+  checkContent("he", "hello");
 
 /*
 
@@ -8,6 +49,7 @@ MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta 
 
 */
 
+/*
 //MIT_TACK_C
 class Shop {
     constructor(non, lagmon, cola){
@@ -38,7 +80,7 @@ class Shop {
   shop.qoldiq();
 
 
-
+*/
 
 
 

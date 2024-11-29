@@ -3,22 +3,23 @@ console.log("Frontend JS ishga tushdi")
 function itemTemplate(item){
     return `
         <li
-                    class="list-group-item list-group-item-info d-flex align-items-center justify-content-between"
-                    >
-                    <span class="item-text">${item.reja}</span>
-                    <div>
-                        <button data-id="${item.id}" class="edit-me btn btn-secondary btn-sm mr-1">
-                            Ozgartirish
-                        </button>
-                        <button data-id="${item._id}" class="delete-me btn btn-danger btn-sm">Ochirish</button>
-                    </div>
-                </li>
+            class="list-group-item list-group-item-info d-flex align-items-center justify-content-between"
+            >
+            <span class="item-text">${item.reja}</span>
+            <div>
+                <button data-id="${item.id}" class="edit-me btn btn-secondary btn-sm mr-1">
+                    Ozgartirish
+                </button>
+                <button data-id="${item._id}" class="delete-me btn btn-danger btn-sm">Ochirish</button>
+            </div>
+        </li>
     `;
 }
 
 let createField = document.getElementById("create-field");
 
 document.getElementById("create-form").addEventListener("submit", function(e){
+    //STEP 1: Front End => Backend malumot jo'natish!
     e.preventDefault();
 
     axios.post("/create-item", {reja: createField.value}).then((response) => {
@@ -44,7 +45,29 @@ document.addEventListener("click", function(e){
     }
 
 
+//EDIT OPERATION    
     if(e.target.classList.contains("edit-me")){
-        alert("siz edit tugmasini bosdiz")
+        let userInput = prompt("O'zgartirish kiriting", e.target.parentElement.parentElement.querySelector(".item-text").innerHTML); //pop up chiqazib beradi o'zgartirish kiritadigan
+        if(userInput){
+            axios.post("/edit-item", {id: e.target.getAttribute("data-id"), new_input: userInput,})
+            .then((response) => {
+                console.log(response.data);
+                e.target.parentElement.parentElement.querySelector(".item-text").innerHTML = userInput;
+            })
+            .catch((err)=>{
+                console.log("Iltimos yana xarakat qiling!")
+            })
+        }
     }
+});
+
+document.getElementById("clean-all").addEventListener("click", function () {
+    axios.post("/delete-all", { delete_all: true })
+        .then((response) => {
+            alert(response.data.state);
+            document.location.reload();
+        })
+        .catch((err) => {
+            console.error("Failed to delete all items:", err);
+        });
 });

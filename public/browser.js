@@ -7,7 +7,7 @@ function itemTemplate(item){
             >
             <span class="item-text">${item.reja}</span>
             <div>
-                <button data-id="${item.id}" class="edit-me btn btn-secondary btn-sm mr-1">
+                <button data-id="${item._id}" class="edit-me btn btn-secondary btn-sm mr-1">
                     Ozgartirish
                 </button>
                 <button data-id="${item._id}" class="delete-me btn btn-danger btn-sm">Ochirish</button>
@@ -31,6 +31,8 @@ document.getElementById("create-form").addEventListener("submit", function(e){
     });
 })
 
+//DELETE FUNCTION   
+
 document.addEventListener("click", function(e){
     //delete oper
     if(e.target.classList.contains("delete-me")){
@@ -49,7 +51,7 @@ document.addEventListener("click", function(e){
     if(e.target.classList.contains("edit-me")){
         let userInput = prompt("O'zgartirish kiriting", e.target.parentElement.parentElement.querySelector(".item-text").innerHTML); //pop up chiqazib beradi o'zgartirish kiritadigan
         if(userInput){
-            axios.post("/edit-item", {id: e.target.getAttribute("data-id"), new_input: userInput,})
+            axios.post("/edit-item", {id: e.target.getAttribute("data-id"), new_input: userInput})
             .then((response) => {
                 console.log(response.data);
                 e.target.parentElement.parentElement.querySelector(".item-text").innerHTML = userInput;

@@ -19,13 +19,15 @@ function itemTemplate(item){
 let createField = document.getElementById("create-field");
 
 document.getElementById("create-form").addEventListener("submit", function(e){
+    console.log("Man ketdim Backendga")
     //STEP 1: Front End => Backend malumot jo'natish!
     e.preventDefault();
 
     axios.post("/create-item", {reja: createField.value}).then((response) => {
-        document.getElementById("item-list").insertAdjacentHTML("beforeend", itemTemplate(response.data));
-        createField.value="";    
-        createField.focus();
+        //console.log("STEP6: Backenddan kelgan malumotni ro'yxat oxirsiga qo'shish")
+        document.getElementById("item-list").insertAdjacentHTML("beforeend", itemTemplate(response.data)); //Tepadagi Function Templatedan design olindi
+        createField.value="";  //HTML input field should be empty after sending POST request   
+        createField.focus(); //HTML input field should be focused in the input field after sending the POST request
     }).catch((err) =>{
         console.log("Iltimos qaytadan harakat qiling")
     });
@@ -35,9 +37,15 @@ document.getElementById("create-form").addEventListener("submit", function(e){
 
 document.addEventListener("click", function(e){
     //delete oper
+    console.log("STEP1: Click eventi amalga oshdi")
+    console.log("THIS is E: ", e);
     if(e.target.classList.contains("delete-me")){
+        console.log("STEP2: delete-me classi borligi tekshirish")
         if(confirm("Aniq ochirmoqchimisiz?")){
-            axios.post("/delete-item", {id: e.target.getAttribute("data-id")}).then((respose)=>{
+            console.log("STEP3: Frontenddan Axios yordamida backendga request jo'natdik");
+            axios.post("/delete-item", {id: e.target.getAttribute("data-id")})
+            .then((respose)=>{
+                console.log("STEP7: Qabul qilingan response orqali HTML parent elementidan 1ta element ochirildi");
                 console.log(respose.data);
                 e.target.parentElement.parentElement.remove();
             }).catch((err)=>{

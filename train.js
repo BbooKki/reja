@@ -1,4 +1,25 @@
 /*
+E-TASK: 
+
+Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+MASALAN: getReverse("hello") return qilsin "olleh"
+*/
+
+function getReverse(str){
+    return str.split("").reverse().join("");
+  }
+  
+const ourString = getReverse("Xislat");
+console.log(ourString);
+
+
+
+
+
+
+
+
+/*
 D-TASK: 
 
 Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
@@ -9,6 +30,7 @@ MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 //2. check the each elemen from the first elem if it exists in the second array
 //3. if it exists then delete the item from both arrays
 
+/*
 function checkContent(a, b){
     let arr1 = a.split("");
     let arr2 = b.split("");
@@ -39,7 +61,7 @@ function checkContent(a, b){
   
   
   checkContent("he", "hello");
-
+*/
 /*
 
 MITASK-C 
@@ -162,19 +184,6 @@ class Shop {
   shop.qoldiq();
   
   */
-        
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
